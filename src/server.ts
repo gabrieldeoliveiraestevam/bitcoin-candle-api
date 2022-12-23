@@ -6,7 +6,6 @@ import CandleMessageChannel from './messages/CandleMessageChannel';
 
 const createServer = async () => {
     config();
-    console.log('Initial')
     await connectMongoDB();
     const PORT = process.env.PORT;
     const server = app.listen(PORT, () => console.log(`App running on port ${PORT}`));
@@ -23,3 +22,5 @@ const createServer = async () => {
         console.log('App server and connection to MongoDB closed');
     })
 }
+
+createServer();
